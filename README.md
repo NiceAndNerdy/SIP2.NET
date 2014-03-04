@@ -8,5 +8,9 @@ Important to note for this version! - This (unsigned, ps) DLL was only tested ag
 
 Also important to note - the hold and renewal behavior has some known bugs.  At the time of this writing, they include:
 
-1) If a patron has the same barcode on hold more than once, TLC's SIP server implementation throws a precision exception. 2) Renewals are mad funky.  RenewAll seems to work and will read the ILS's renewal rules (i.e. how long a renewed item is
+
+1) If a patron has the same barcode on hold more than once, TLC's SIP server implementation throws a precision exception.
+
+
+2) Renewals are mad funky.  RenewAll seems to work and will read the ILS's renewal rules (i.e. how long a renewed item is
    good for).  Individual renewal (i.e. one item at a time) don't seem to have that intelligence.  Due dates have to be      submitted along with the initial SIP renewal command.  That is not supported [yet] by this implementation.  It's also     up to the developer to find someway to establish those renewal rules themselves.  SIP doesn't seem to be capable of       pulling them from the ILS.
