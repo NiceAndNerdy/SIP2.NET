@@ -1,0 +1,46 @@
+﻿        /// <summary>
+        ///     Method to checkout items via SIP2 protocol.  Returns raw SIP2 response dump of the checkout transaction.  
+        /// </summary>
+        /// <param name="patronBarcode">Barcode of the patron</param>
+        /// <param name="itemBarcodes">An IEnumberable of string (i.e. list, queue, array, etc.) containing the books you wish to checkout.</param>
+        /// <returns>Raw SIP2 response dump of the checkout transaction.</returns>
+        /* public List<string> CheckOut(string patronBarcode, IEnumerable<string> itemBarcodes)
+        {
+            if (!connected) throw new NotConnectedException("Cannot checkout books.  SIP connection is not established!");
+            if (authorized)
+            {
+                List<string> responseList = new List<string>();
+                string date = GetDateString();
+                    
+                foreach (string item in itemBarcodes)
+                {
+
+                    string sipCommand = string.Format("11YN{0}                  AO1|AA{1}|AB{2}|AC{3}", date, patronBarcode, item, sip.password);
+                    string sipResponse = (SipFactory(sipCommand));
+                        
+                    if (sipResponse.Contains("\r"))
+                    {
+                        int endline = sipResponse.IndexOf("\r");
+                        responseList.Add(sipResponse.Substring(0, endline));
+                    }
+                    else if (sipResponse.Contains("\n"))
+                    {
+                        int endline = sipResponse.IndexOf("\n");
+                        responseList.Add(sipResponse.Substring(0, endline));
+                    }
+                    else if (sipResponse.Contains("\0"))
+                    {
+                        int endline = sipResponse.IndexOf("\0");
+                        responseList.Add(sipResponse.Substring(0, endline));
+                    }
+                    else responseList.Add(sipResponse);
+                }
+
+                return responseList;
+            }
+            else
+            {
+                List<string> responseList = new List<string> { "Cannot check out books.  Patron is not authorized!" };
+                return responseList;
+            }     
+        } */

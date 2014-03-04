@@ -1,0 +1,15 @@
+C:\Users\mlesniak\Desktop\Programming\C#\timer\SIP2\bin\Debug\SIP2.dll
+C:\Users\mlesniak\Desktop\Programming\C#\timer\SIP2\bin\Debug\SIP2.pdb
+C:\Users\mlesniak\Desktop\Programming\C#\timer\SIP2\obj\Debug\SIP2.csprojResolveAssemblyReference.cache
+C:\Users\mlesniak\Desktop\Programming\C#\timer\SIP2\obj\Debug\SIP2.dll
+C:\Users\mlesniak\Desktop\Programming\C#\timer\SIP2\obj\Debug\SIP2.pdb
+C:\Users\mlesniak\Desktop\Programming\C#\timer_RC\SIP2\bin\Debug\SIP2.dll
+C:\Users\mlesniak\Desktop\Programming\C#\timer_RC\SIP2\bin\Debug\SIP2.pdb
+C:\Users\mlesniak\Desktop\Programming\C#\timer_RC\SIP2\obj\Debug\SIP2.csprojResolveAssemblyReference.cache
+C:\Users\mlesniak\Desktop\Programming\C#\timer_RC\SIP2\obj\Debug\SIP2.dll
+C:\Users\mlesniak\Desktop\Programming\C#\timer_RC\SIP2\obj\Debug\SIP2.pdb
+C:\Users\mlesniak\Desktop\Programming\C#\SessionSoft\Client\SIP2_DLL\obj\Debug\SIP2.csprojResolveAssemblyReference.cache
+C:\Users\mlesniak\Desktop\Programming\C#\SessionSoft\Client\SIP2_DLL\obj\Debug\SIP2.dll
+C:\Users\mlesniak\Desktop\Programming\C#\SessionSoft\Client\SIP2_DLL\obj\Debug\SIP2.pdb
+C:\Users\mlesniak\Desktop\Programming\C#\SessionSoft\Client\SIP2_DLL\bin\Debug\SIP2.dll
+C:\Users\mlesniak\Desktop\Programming\C#\SessionSoft\Client\SIP2_DLL\bin\Debug\SIP2.pdb
