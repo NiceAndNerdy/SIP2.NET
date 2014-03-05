@@ -169,6 +169,7 @@ namespace SIP2
         public bool TestConnection()
         {
             Open();
+            Close();
             return connected;
         }
         
@@ -191,6 +192,7 @@ namespace SIP2
             this.sip.password = password;
             this.sip.extra_number = extra_number;
             Open();
+            Close();
             return connected;
         }
 
@@ -209,6 +211,7 @@ namespace SIP2
             this.sip.password = sipParameters.password;
             this.sip.extra_number = sipParameters.extra_number;
             Open();
+            Close();
             return connected;
         }
 
@@ -288,6 +291,7 @@ namespace SIP2
         }
 
 
+
         /// <summary>
         ///     Method to checkout items via SIP2 protocol.  Returns list of Items.  Returns null if patron is not authorized.  
         /// </summary>
@@ -317,6 +321,7 @@ namespace SIP2
                 return itemListOut;
             }
         }
+
 
 
         /// <summary>
@@ -408,6 +413,7 @@ namespace SIP2
         }
       
 
+
         /// <summary>
         ///     Renews all items a patron currently has checked out.  Doesn't seem to care if the renewal limit has been reached.  
         /// </summary>
@@ -421,6 +427,7 @@ namespace SIP2
             if (sipResponse.Substring(2,1) == "1") return true;
             else return false;
         }
+
 
 
         /// <summary>
@@ -438,6 +445,7 @@ namespace SIP2
         }
         
         
+
         /// <summary>
         ///     Closes SIP connection.
         /// </summary>
