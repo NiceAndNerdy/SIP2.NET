@@ -16,4 +16,4 @@ Also important to note - the hold and renewal behavior has some known bugs.  At 
    good for).  Individual renewal (i.e. one item at a time) don't seem to have that intelligence.  Due dates have to be      submitted along with the initial SIP renewal command.  That is not supported [yet] by this implementation.  It's also     up to the developer to find someway to establish those renewal rules themselves.  SIP doesn't seem to be capable of       pulling them from the ILS.
    
    
-5/23/2014 - Update - Testing against Koha has begun.  So far, it looks like the connection testers and patron parser works right out of the box.  I will be testing the methods in the coming weeks.
+5/23/2014 - Update - Testing against Koha has begun.  So far, it looks like the connection testers and patron parser works right out of the box.  I will be testing the other methods in the coming weeks.
