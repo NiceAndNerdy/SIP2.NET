@@ -17,4 +17,4 @@ Also important to note - the hold and renewal behavior has some known bugs.  At 
    
 5/23/2014 - Update - Testing against Koha has begun.  So far, it looks like the connection testers and patron parser works right out of the box.  Other methods also appear to work.  
 
-3/29/2017 - Update - Added checksum capabilities, resoved Sirsi SSH connection issues, and cleaned up some of the implementations. 
+3/29/2017 - Update - Added checksum capabilities, resoved Sirsi SSH connection issues, and cleaned up some of the implementations.  This version has been tested on Sirsi, III, Koha, and TLC SIP2 servers. 
