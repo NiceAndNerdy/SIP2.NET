@@ -58,4 +58,10 @@ namespace SIP2
         public InvalidParameterException() { }
         public InvalidParameterException(string message) : base(message) { }
     }
+
+    public class NoChecksumException : Exception
+    {
+        public NoChecksumException() { }
+        public NoChecksumException(string message) : base(message) { }
+    }
 }

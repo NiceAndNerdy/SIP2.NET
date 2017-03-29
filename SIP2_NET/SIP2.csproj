@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -41,15 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckSum.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="SipExceptions.cs" />
     <Compile Include="Patron.cs" />
     <Compile Include="SIP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SipServerParameters.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="OldCheckoutRawDump.txt" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

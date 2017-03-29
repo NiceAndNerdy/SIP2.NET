@@ -60,40 +60,44 @@ namespace SIP2
             //  Loop through the rest of the fields.
             foreach (var element in patron_data)
             {
-                //  Name
-                if (element.Substring(0, 2).ToUpper() == "AE") this.Name = element.Substring(2);
-                
-                //  Pin number    
-                if (element.Substring(0, 2).ToUpper() == "CQ") this.Pin = element.Substring(2);
-                
-                //  Fines
-                if (element.Substring(0, 2).ToUpper() == "BV") this.Fines = Convert.ToDecimal(element.Substring(2));
-                
-                //  Max fines
-                if (element.Substring(0, 2).ToUpper() == "CC") this.FineLimit = Convert.ToDecimal(element.Substring(2));
-                
-                //  Address
-                if (element.Substring(0, 2).ToUpper() == "BD") this.Address = element.Substring(2);
-                
-                //  Email
-                if (element.Substring(0, 2).ToUpper() == "BE") this.Email = element.Substring(2);
-                
-                //  Phone
-                if (element.Substring(0, 2).ToUpper() == "BF") this.Phone = element.Substring(2);
-                
-                //  System Message
-                if (element.Substring(0, 2).ToUpper() == "AF") this.Message = element.Substring(2);
-                
-                //  Patron type
-                if (element.Substring(0, 2).ToUpper() == "PT") this.Type = element.Substring(2);
 
-                //  Hold Item Limit
-                if (element.Substring(0, 2).ToUpper() == "BZ") this.HoldItemLimit = Convert.ToInt32(element.Substring(2));
-
-                //  Check for valid patron status.
-                if (element.Substring(0, 2).ToUpper() == "BL") 
+                if (element.Length >= 2)
                 {
-                    if (element.Substring(2,1).ToUpper().Trim().Equals("N")) this.Authorized = false;
+                    //  Name
+                    if (element.Substring(0, 2).ToUpper() == "AE") this.Name = element.Substring(2);
+
+                    //  Pin number    
+                    if (element.Substring(0, 2).ToUpper() == "CQ") this.Pin = element.Substring(2);
+
+                    //  Fines
+                    if (element.Substring(0, 2).ToUpper() == "BV") this.Fines = Convert.ToDecimal(element.Substring(2));
+
+                    //  Max fines
+                    if (element.Substring(0, 2).ToUpper() == "CC") this.FineLimit = Convert.ToDecimal(element.Substring(2));
+
+                    //  Address
+                    if (element.Substring(0, 2).ToUpper() == "BD") this.Address = element.Substring(2);
+
+                    //  Email
+                    if (element.Substring(0, 2).ToUpper() == "BE") this.Email = element.Substring(2);
+
+                    //  Phone
+                    if (element.Substring(0, 2).ToUpper() == "BF") this.Phone = element.Substring(2);
+
+                    //  System Message
+                    if (element.Substring(0, 2).ToUpper() == "AF") this.Message = element.Substring(2);
+
+                    //  Patron type
+                    if (element.Substring(0, 2).ToUpper() == "PT") this.Type = element.Substring(2);
+
+                    //  Hold Item Limit
+                    if (element.Substring(0, 2).ToUpper() == "BZ") this.HoldItemLimit = Convert.ToInt32(element.Substring(2));
+
+                    //  Check for valid patron status.
+                    if (element.Substring(0, 2).ToUpper() == "BL")
+                    {
+                        if (element.Substring(2, 1).ToUpper().Trim().Equals("N")) this.Authorized = false;
+                    }
                 }
             }
         }
