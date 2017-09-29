@@ -1,4 +1,4 @@
-﻿/**************************************************************
+/**************************************************************
  * 
  *  (c) 2017 Mark Lesniak - Nice and Nerdy LLC
  *  
@@ -68,6 +68,9 @@ namespace SIP2
         * Public Properties
         *********************************************/
 
+        /// <summary>
+        /// Add checksum value to the SIP message.
+        /// </summary>
         public bool HasChecksum
         {
             get
@@ -91,6 +94,11 @@ namespace SIP2
                 }
             }
         }
+
+        /// <summary>
+        /// Show client and server messages in the console.
+        /// </summary>
+        public bool UseConsoleDebugMode { get; set; } = false;
 
 
 
@@ -492,7 +500,7 @@ namespace SIP2
         /// </summary>
         public void Close()
         {
-            if ((sender != null) & (sender != null))
+            if ((sender != null))
             {
                 incrementer = 0;
                 sender.Shutdown(SocketShutdown.Both);
@@ -553,9 +561,12 @@ namespace SIP2
             // Encode the data string into a byte array.
             byte[] msg = Encoding.ASCII.GetBytes(sipCommand + '\r');
 
+            //  Show sent message in console if UseConsoleDebugMode is selected.
+            if (UseConsoleDebugMode) { Console.WriteLine(sipCommand); }
+
             // Send the data through the socket.
             int bytesSent = sender.Send(msg);
-
+            
             // Receive the response from the remote device.
             StringBuilder outputString = new StringBuilder();
             string bit = String.Empty;
@@ -572,6 +583,9 @@ namespace SIP2
                 }
             }
 
+            //  Show received message in console if UseConsoleDebugMode is selected.
+            if (UseConsoleDebugMode) { Console.WriteLine(outputString.ToString()); }
+
             return outputString.ToString();
         }
 
@@ -587,6 +601,9 @@ namespace SIP2
 
             // Apply checksum
             string sipCommandWithChecksum = CheckSum.ApplyChecksum(sipCommand);
+
+            //  Show sent message in console if UseConsoleDebugMode is selected.
+            if (UseConsoleDebugMode) { Console.WriteLine(sipCommandWithChecksum); }
 
             // Encode the data string into a byte array.
             byte[] msg = Encoding.ASCII.GetBytes(sipCommandWithChecksum + '\r');
@@ -611,6 +628,10 @@ namespace SIP2
             }
 
             incrementer++;
+
+            //  Show received message in console if UseConsoleDebugMode is selected.
+            if (UseConsoleDebugMode) { Console.WriteLine(outputString.ToString()); }
+
             return outputString.ToString();
         }
     }
