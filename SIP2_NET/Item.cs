@@ -1,4 +1,4 @@
-﻿/**************************************************************
+/**************************************************************
  * 
  *  (c) 2014 Mark Lesniak - Nice and Nerdy LLC
  *  
@@ -67,23 +67,26 @@ namespace SIP2
 
             foreach (string element in item_data)
             {
-                // Due Date               
-                if (element.Substring(0, 2).ToUpper() == "AH") this.DueDate = element.Substring(2);
-                               
-                // Item title
-                if (element.Substring(0, 2).ToUpper() == "AJ") this.Title = element.Substring(2);
-                
-                // Item barcode
-                if (element.Substring(0, 2).ToUpper() == "AB") this.ItemBarcode = element.Substring(2);
-                
-                // Patron id
-                if (element.Substring(0, 2).ToUpper() == "AA") this.PatronId = element.Substring(2);
-                
-                // Institution id
-                if (element.Substring(0, 2).ToUpper() == "AO") this.InstitutionId = element.Substring(2);
-                
-                // Screen message
-                if (element.Substring(0, 2).ToUpper() == "AF") this.Message = element.Substring(2);
+                if (!String.IsNullOrEmpty(element))
+                {
+                    // Due Date               
+                    if (element.Substring(0, 2).ToUpper() == "AH") this.DueDate = element.Substring(2);
+
+                    // Item title
+                    if (element.Substring(0, 2).ToUpper() == "AJ") this.Title = element.Substring(2);
+
+                    // Item barcode
+                    if (element.Substring(0, 2).ToUpper() == "AB") this.ItemBarcode = element.Substring(2);
+
+                    // Patron id
+                    if (element.Substring(0, 2).ToUpper() == "AA") this.PatronId = element.Substring(2);
+
+                    // Institution id
+                    if (element.Substring(0, 2).ToUpper() == "AO") this.InstitutionId = element.Substring(2);
+
+                    // Screen message
+                    if (element.Substring(0, 2).ToUpper() == "AF") this.Message = element.Substring(2);
+                }
             }
         }
     }
