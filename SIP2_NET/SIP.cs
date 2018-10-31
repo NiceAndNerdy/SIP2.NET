@@ -628,6 +628,7 @@ namespace SIP2
             }
 
             incrementer++;
+            if (incrementer == 10) { incrementer = 0; }
 
             //  Show received message in console if UseConsoleDebugMode is selected.
             if (UseConsoleDebugMode) { Console.WriteLine(outputString.ToString()); }
