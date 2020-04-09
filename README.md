@@ -9,7 +9,7 @@ SIP2.NET
 
 Implementation in C# of the SIP2 client version 2.0 for libraries.  Allows users to programmatically checkout, renew, and checkin materials regardless of database architecture.  Requires a running and configured SIP2 server. 
 
-~~Important to note for this version! - This (unsigned, ps) DLL was only tested against The Library Corporation's (TLC's) and Koha's implementation of SIP2!  It is unknown whether this will work with other ILS products.  It should.  But we all know where assumptions get us.  I would also strongly encourage anyone using another ILS to take a crack at trying this code against their SIP server.  Please report back your sucesses and your brickwalls.
+~~Important to note for this version! - This (unsigned, ps) DLL was only tested against The Library Corporation's (TLC's) and Koha's implementation of SIP2!  It is unknown whether this will work with other ILS products.  It should.  But we all know where assumptions get us.  I would also strongly encourage anyone using another ILS to take a crack at trying this code against their SIP server.  Please report back your sucesses and your brickwalls.~~
 
 Also important to note - the hold and renewal behavior has some known bugs.  At the time of this writing, they include:
 
